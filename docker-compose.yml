@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  db:
+    build:
+      context: ./db
+      dockerfile: local.Dockerfile
+    ports:
+      - 127.0.0.1:5432:5432
+    volumes:
+      - ./db/init:/docker-entrypoint-initdb.d
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - TZ=Asia/Tokyo
