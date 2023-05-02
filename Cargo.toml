@@ -7,3 +7,8 @@ edition = "2021"
 
 [dependencies]
 csv = "1.2.1"
+diesel = { version = "2.0.4", features = ["postgres", "chrono"] }
+dotenv = "0.15.0"
+postgres = "0.19.5"
+serde = "1.0.160"
+serde_derive = "1.0.160"
